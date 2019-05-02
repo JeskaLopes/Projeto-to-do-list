@@ -24,9 +24,14 @@ form.addEventListener('submit', function(evento){
     divmae.appendChild(excluir);
     primeiraDiv.appendChild(divmae);
 
-    tarefas.addEventListener("click", function(){
+    tarefas.addEventListener("dblclick", function(){
         tarefas.style.textDecoration = "line-through";
         tarefas.style.color = "grey";
+    })
+
+    tarefas.addEventListener("click", function(){
+        tarefas.style.textDecoration = "none";
+        tarefas.style.color = "black";
     })
 
     excluir.addEventListener("click", function(){
@@ -41,11 +46,14 @@ form.addEventListener('submit', function(evento){
         divmae.remove();
     })
 
-    selecionarTodas.addEventListener("click", function(){
+    selecionarTodas.addEventListener("dblclick", function(){
         tarefas.style.textDecoration = "line-through";
         tarefas.style.color = "grey";
     }) 
+    selecionarTodas.addEventListener("click", function(){
+        tarefas.style.textDecoration = "none";
+        tarefas.style.color = "black";
+    }) 
 
-    tarefas.addEventListener(DragEvent)
 });
 
