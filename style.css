@@ -121,6 +121,9 @@ p{
         font-size:12px;
         display:inline-block; 
     }
+    a{
+        font-size: 6px;
+    }
 }
 
 @media(max-width: 420px){
@@ -136,6 +139,10 @@ p{
         font-size:12px;
         display:inline-block; 
     }
+
+    a{
+        font-size: 6px;
+    }
 }
 
 @media(max-width: 768px){
@@ -150,6 +157,9 @@ p{
     #selecionarTodas{
         font-size: 12px;
         display:inline-block; 
+    }
+    a{
+        font-size: 6px;
     }
 }
 
