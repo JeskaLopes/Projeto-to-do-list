@@ -6,18 +6,20 @@ body{
 
 #div1{
     text-align:center;
-    height: 300px;
+    min-height: 300px;
 
 }
 .container{
     background-color: rgb(251, 249, 252); 
     width:50%;
     margin:0 auto; 
+    margin-top: 100px;
     border: 1px solid black;
 }
 
 
 h1{
+    font-size:1.5em;
     text-align: center; 
     
 }
@@ -26,14 +28,16 @@ h1{
 button{
     width: 100%;
     height: 10% ;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 input{
     font-size: 16px;
     text-align: center;
-    width: 99%; 
+    width: 99.5%; 
     height: 200px;
+    border-left: black;
 }
 
 .botao{
@@ -47,18 +51,17 @@ input{
     display: block;
 }
 
-/* #div1{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-
-} */
-
 button{
     border: none;
     background: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
+span{
+    cursor: pointer;
+    border-radius: 8px;
+}
 
 .divTarefas{
     display:flex;
@@ -67,6 +70,10 @@ button{
     margin: 0 30px;   
     border-bottom: 1px solid rgb(199, 196, 196);
 
+}
+
+p{
+    cursor: pointer;
 }
 
 
@@ -80,6 +87,51 @@ button{
 
 #selecionarTodas, #excluirTodas{
     width: 50%;
-
-
+    padding: 14px;
+    border: 1px solid gray;
+    background: rgb(209, 207, 207);
+    border-radius: 8px;
+    margin-left: 6px;
+    margin-right: 6px; 
 }
+
+.botao{ 
+    color: white;
+    border-radius: 8px;
+}
+
+
+@media(max-width:320px){
+    h1{
+        font-size:100%
+    }
+
+    .container{
+        margin-top: 100px;
+        width:80%;
+    }
+}
+
+@media(max-width: 420px){
+    h1{
+        font-size:100%
+    }
+
+    .container{
+        margin-top: 100px;
+        width:80%;
+    }
+}
+
+@media(max-width: 768px){
+    h1{
+        font-size:100%  
+    }
+
+    .container{
+        margin-top: 100px;
+        width:80%;
+    }
+}
+
+

@@ -6,11 +6,11 @@ const primeiraDiv = document.querySelector('#div1');
 form.addEventListener('submit', function(evento){
     evento.preventDefault()
 
-    if (caixaTexto.value.length == 0){
+    if (caixaTexto.value.length == 0 || caixaTexto.value.replace (/\s/g , '').length == 0) {
         alert("Por favor, Digite uma tarefa!");
         return(false);
     }
-
+    
     let divmae = document.createElement("div");
     let tarefas = document.createElement("p");
     let excluir = document.createElement("span");
@@ -30,8 +30,22 @@ form.addEventListener('submit', function(evento){
     })
 
     excluir.addEventListener("click", function(){
-        divmae.parentNode.removeChild(divmae);
-        
+        divmae.parentNode.removeChild(divmae);   
     })
+
+    let excluirTodas = document.getElementById('excluirTodas');
+    let selecionarTodas = document.getElementById('selecionarTodas');
+
+    excluirTodas.addEventListener("click", function(){
+        evento.preventDefault()
+        divmae.remove();
+    })
+
+    selecionarTodas.addEventListener("click", function(){
+        tarefas.style.textDecoration = "line-through";
+        tarefas.style.color = "grey";
+    }) 
+
+    tarefas.addEventListener(DragEvent)
 });
 
