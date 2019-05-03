@@ -45,6 +45,8 @@ input{
 
 #selecionarTodas:hover,#excluirTodas:hover{
     background-color:rgb(202, 145, 216);
+    -webkit-transition: 0,2s; 
+    transition: 0,2s;
 }
 
 .principal{
@@ -61,6 +63,8 @@ button{
 
 button:hover{
     background-color:  rgb(199, 196, 196);
+    -webkit-transition: 0.2s; 
+     transition: 0,2s;
 }
 
 span{
