@@ -19,6 +19,9 @@ form.addEventListener('submit', function(evento){
     tarefas.innerHTML=caixaTexto.value;
     excluir.innerHTML="x";
     document.getElementById("campo").value = "";
+    divmae.setAttribute('draggable', true);
+    tarefas.setAttribute('draggable', true);
+    primeiraDiv.setAttribute('draggable', true); 
     
     divmae.appendChild(tarefas);
     divmae.appendChild(excluir);
@@ -50,10 +53,26 @@ form.addEventListener('submit', function(evento){
         tarefas.style.textDecoration = "line-through";
         tarefas.style.color = "grey";
     }) 
+
     selecionarTodas.addEventListener("click", function(){
         tarefas.style.textDecoration = "none";
         tarefas.style.color = "black";
     }) 
 
+    //divmae
+    primeiraDiv.addEventListener("dragstart", function (ev) { 
+        dragging = ev.target.closest(divmae)//tarefas
+    })
+    
+    primeiraDiv.addEventListener("dragover", function (ev) {
+        ev.preventDefault();
+        const node = ev.target.closest(divmae) 
+        this.parentNode.insertBefore(dragging, node)
+    })
+
+    primeiraDiv.addEventListener("dragend", function (ev) { 
+        dragging = null     
+    })
+ 
 });
 
